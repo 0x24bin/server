@@ -52,6 +52,7 @@ def get_task():
         if path.exists(fname):
             return "任务已经存在于我的服务器之中"
         f.save(fname)
+        #pid = Popen('exec /home/fang/FromGithub/sqlmap/sqlmap.py -m %s --smart --threads 10 --batch '%(fname),shell=True,stdout=open('%s_log'%fname,'w+')).pid
         pid = Popen('exec /home/fang/FromGithub/sqlmap/sqlmap.py -m %s --smart --threads 10 --batch '%(fname),shell=True,stdout=open('%s_log'%fname,'w+')).pid
         print('添加前-->%d  class list-->'%len(class_list))
         class_list.append(subProc(pid,fname,datetime.now()))
