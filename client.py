@@ -10,6 +10,7 @@ from flask import request
 from werkzeug.utils import secure_filename
 from datetime import datetime
 from subprocess import Popen
+from subprocess import PIPE
 from os import kill
 from os import path
 from simpleClass import subProc
@@ -23,8 +24,9 @@ password = 'c229c2520755767f'
 #----------------------------------------------------------------------
 def get_procNum(procName):
     """"""
-    p = subprocess.Popen('ps -ef | grep "%s" | wc'%procName,shell=True,stdout=subprocess.PIPE)
-    return p.p.communicate()[0][6]-1
+    p = Popen('ps -ef | grep "%s" | wc'%procName,shell=True,stdout=PIPE)
+    i  = p.communicate()[0]
+    return int(str(i).split(' ')[6])-1
 #----------------------------------------------------------------------
 @app.route('/status',methods=['GET'])
 def check_status(): # return 1 if can added
@@ -70,3 +72,4 @@ def get_task():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    #print(get_procNum('sqlmap'))
