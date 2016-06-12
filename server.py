@@ -48,8 +48,9 @@ def main(host_list,target_dir):
 
 if __name__=='__main__':
     #sendTask('/tmp/ips','http://localhost:5000/')
-    host = ['http://localhost:5000','http://nofiht.ml:5000','http://139.129.25.173:5000']
+    #host = ['http://localhost:5000','http://nofiht.ml:5000','http://139.129.25.173:5000']
+    host = ['http://localhost:5000']
     try:
-        main(host,'/tmp/tt')
+        main(host,'./target')
     except Exception as e:
         print(e)
