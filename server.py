@@ -30,16 +30,19 @@ def check_status(host):
         elif req.text=='0':
             return False
     except TimeoutError:
+        print('连接到%s超时'%host)
         return False
 #----------------------------------------------------------------------
 def main(host_list,target_dir):
     """对一个客户端"""
+    import shutil
     file_list = os.listdir(path=target_dir)
     while(len(file_list)): # target_dir不为空的时候
         for host in host_list:
             if check_status(host):
                 sendTask('%s/%s'%(target_dir,file_list[0]),host)
                 print('成功发送一个任务-->%s'%file_list[0])
+                shutil.move('./target/%s'%file_list[0],'hasChecked/')
                 file_list.remove(file_list[0])
                 time.sleep(2)
             else:
