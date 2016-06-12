@@ -41,10 +41,15 @@ def main(host_list,target_dir):
                 sendTask('%s/%s'%(target_dir,file_list[0]),host)
                 print('成功发送一个任务-->%s'%file_list[0])
                 file_list.remove(file_list[0])
-                time.sleep(1)
-                continue
-        time.sleep(100)
+                time.sleep(2)
+            else:
+                print('节点 %s 正忙'%host)
+                time.sleep(2)
+
 if __name__=='__main__':
     #sendTask('/tmp/ips','http://localhost:5000/')
-    host = ['http://localhost:5000']
-    main(host,'/tmp/tt')
+    host = ['http://localhost:5000','http://nofiht.ml:5000','http://139.129.25.173:5000']
+    try:
+        main(host,'/tmp/tt')
+    except Exception as e:
+        print(e)

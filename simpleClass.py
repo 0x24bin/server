@@ -7,7 +7,7 @@
 """
 from datetime import datetime
 import os
-
+from subprocess import Popen
 if __name__ == '__main__':
     unittest.main()
 ########################################################################
@@ -28,11 +28,14 @@ class subProc:
     def is_alive(self):
         """看看自己是不是还活着"""
         try:
-            os.kill(self.pid,0)
-            return True 
-        except ProcessLookupError:
-            print('%d-->进程不存在'%self.pid)
-            return False
+            p = ''
+            Popen('ps -A | grep %s'%self.pid,stdout=p)
+            if not p: # 什么都没有返回
+                return False
+            if 'defunct' in p:
+                return False # 僵尸进程
+            else:
+                return True
         except Exception as e:
             print('%d-->发现异常'%self.pid)
             print(e)

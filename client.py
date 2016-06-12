@@ -27,7 +27,7 @@ def check_status(): # return 1 if can added
     for i in class_list: # 要是子进程已经折腾完了 那么从proc_dic里面把它删除掉
         if i.is_alive(): # 进程存在 
             if i.get_time() > 60: # 耗费的时间大于六十分钟的话
-                kill(i.pid) # 杀死进程..不知道能不能杀死反正我已经杀了..
+                kill(i.pid,9) # 杀死进程..不知道能不能杀死反正我已经杀了..
                 class_list.remove(i)
                 print('强行杀死了一个进程')
         else:
