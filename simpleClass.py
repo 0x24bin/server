@@ -8,8 +8,7 @@
 from datetime import datetime
 import os
 from subprocess import Popen
-if __name__ == '__main__':
-    unittest.main()
+from subprocess import PIPE
 ########################################################################
 class subProc:
     """一个sqlmap进程需要有的东西"""
@@ -28,14 +27,15 @@ class subProc:
     def is_alive(self):
         """看看自己是不是还活着"""
         try:
-            p = ''
-            Popen('ps -A | grep %s'%self.pid,stdout=p)
-            if not p: # 什么都没有返回
-                return False
-            if 'defunct' in p:
-                return False # 僵尸进程
-            else:
-                return True
+            p = Popen('ps -A | grep %s'%self.pid,stdout=PIPE)
+            for i in p.stdout:
+                str_ = str(i)
+                if not str_:
+                    return False
+                elif 'defunct' in str_:
+                    return False
+                else:
+                    return True
         except Exception as e:
             print('%d-->发现异常'%self.pid)
             print(e)

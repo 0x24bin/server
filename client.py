@@ -19,22 +19,29 @@ log_file = '/tmp/log/'
 class_list = []
 MAX_PROC = 8
 password = 'c229c2520755767f'
+
+#----------------------------------------------------------------------
+def get_procNum(procName):
+    """"""
+    p = subprocess.Popen('ps -ef | grep "%s" | wc'%procName,shell=True,stdout=subprocess.PIPE)
+    return p.p.communicate()[0][6]-1
 #----------------------------------------------------------------------
 @app.route('/status',methods=['GET'])
 def check_status(): # return 1 if can added
     global class_list
     """查看此时还能不能加入新c的任务"""
-    for i in class_list: # 要是子进程已经折腾完了 那么从proc_dic里面把它删除掉
-        if i.is_alive(): # 进程存在 
-            if i.get_time() > 60: # 耗费的时间大于六十分钟的话
-                kill(i.pid,9) # 杀死进程..不知道能不能杀死反正我已经杀了..
-                class_list.remove(i)
-                print('强行杀死了一个进程')
-        else:
-            class_list.remove(i) # 进程不存在 说明执行完毕了
-            print('发现一个进程已经完了.')
-    print('现在有-->个任务',len(class_list))
-    if len(class_list)<MAX_PROC:
+    # for i in class_list: # 要是子进程已经折腾完了 那么从proc_dic里面把它删除掉
+        # if i.is_alive(): # 进程存在 
+            # if i.get_time() > 60: # 耗费的时间大于六十分钟的话
+                # kill(i.pid,9) # 杀死进程..不知道能不能杀死反正我已经杀了..
+                # class_list.remove(i)
+                # print('强行杀死了一个进程')
+        # else:
+            # class_list.remove(i) # 进程不存在 说明执行完毕了
+            # print('发现一个进程已经完了.')
+    procNum = get_procNum('sqlmap')
+    print('现在有-->个任务',procNum)
+    if procNum<MAX_PROC:
         print('可以添加')
         return '1'
     else:
@@ -57,10 +64,6 @@ def get_task():
         print('添加前-->%d  class list-->'%len(class_list))
         class_list.append(subProc(pid,fname,datetime.now()))
         print('添加后-->%d  class list-->'%len(class_list))
-        #proc_dic[pid]=datetime.now()#.strftime('%H%M%S') # 时分秒 用来测试数据
-        #Popen('ping www.baidu.com',shell=True)
-        #Popen('wget http://localhost:5000/c229c2520755767f/',shell=True)
-        #Popen('cat %s'%fname,shell=True)
         return "success"
     except EOFError:
         return '服务器返回了一个错误:->%s'%str(e)
