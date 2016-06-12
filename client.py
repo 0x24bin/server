@@ -22,25 +22,26 @@ MAX_PROC = 8
 password = 'c229c2520755767f'
 
 #----------------------------------------------------------------------
+@app.route('/info')
+def get_info():
+    """"""
+    import psutil
+    info = psutil.virtual_memory()
+    mem_info = '总共内存:%.2fM 已用内存:%.2fM 占用比例:%s'%(info.total/(1014*1024),info.used/(1014*1024),info.percent)
+    cpu_info = 'cpu核心数:%s cpu使用率:%s'%(psutil.cpu_count(),psutil.cpu_percent())
+    return mem_info+'<br>'+cpu_info
+#----------------------------------------------------------------------
 def get_procNum(procName):
     """"""
+    
     p = Popen('ps -ef | grep "%s" | wc'%procName,shell=True,stdout=PIPE)
-    i  = p.communicate()[0]
-    return int(str(i).split(' ')[6])-1
+    i  = p.stdout.readline()
+    return int(i.decode().strip().split(' ')[0])-1
 #----------------------------------------------------------------------
 @app.route('/status',methods=['GET'])
 def check_status(): # return 1 if can added
     global class_list
     """查看此时还能不能加入新c的任务"""
-    # for i in class_list: # 要是子进程已经折腾完了 那么从proc_dic里面把它删除掉
-        # if i.is_alive(): # 进程存在 
-            # if i.get_time() > 60: # 耗费的时间大于六十分钟的话
-                # kill(i.pid,9) # 杀死进程..不知道能不能杀死反正我已经杀了..
-                # class_list.remove(i)
-                # print('强行杀死了一个进程')
-        # else:
-            # class_list.remove(i) # 进程不存在 说明执行完毕了
-            # print('发现一个进程已经完了.')
     procNum = get_procNum('sqlmap')
     print('现在有-->个任务',procNum)
     if procNum<MAX_PROC:
@@ -54,22 +55,32 @@ def check_status(): # return 1 if can added
 @app.route('/new',methods=['POST'])
 def get_task():
     global class_list
-    try:
-        f = request.files['target']
-        print(request.files,'==')
-        fname = './log/%s'%secure_filename(f.filename)
-        if path.exists(fname):
-            return "任务已经存在于我的服务器之中"
-        f.save(fname)
-        #pid = Popen('exec /home/fang/FromGithub/sqlmap/sqlmap.py -m %s --smart --threads 10 --batch '%(fname),shell=True,stdout=open('%s_log'%fname,'w+')).pid
-        pid = Popen('exec /home/fang/FromGithub/sqlmap/sqlmap.py -m %s --smart --threads 10 --batch '%(fname),shell=True,stdout=open('%s_log'%fname,'w+')).pid
-        print('添加前-->%d  class list-->'%len(class_list))
-        class_list.append(subProc(pid,fname,datetime.now()))
-        print('添加后-->%d  class list-->'%len(class_list))
-        return "success"
-    except EOFError:
-        return '服务器返回了一个错误:->%s'%str(e)
-
+    f = request.files['target']
+    print(request.files,'==')
+    fname = './toScan/%s'%secure_filename(f.filename)
+    log_name = './log/%s'%secure_filename(f.filename)
+    if path.exists(fname):
+        return "任务已经存在于我的服务器之中"
+    f.save(fname)
+    #pid = Popen('exec /home/fang/FromGithub/sqlmap/sqlmap.py -m %s --smart --threads 10 --batch '%(fname),shell=True,stdout=open('%s_log'%fname,'w+')).pid
+    Popen('exec /home/fang/FromGithub/sqlmap/sqlmap.py -m %s --smart -v 0 --threads 10 --batch '%(fname),shell=True,stdout=open('%s_log'%log_name,'w+'))
+#    class_list.append(subProc(pid,fname,datetime.now()))
+    print('添加一个任务,系统当前状态为: %s'%get_info())
+    return "success"
+#----------------------------------------------------------------------
+@app.route('/neaaaw',methods=['POST'])
+def get_ff():
+    """轻量级的测试方法"""
+    f = request.files['target']
+    fname = './toScan/%s'%secure_filename(f.filename)
+    print(fname)
+    log_name = './log/%s'%secure_filename(f.filename)
+    if path.exists(fname):
+        return '任务已经存在'
+    f.save(fname)
+    print('fname->%s log_file->%s'%(fname,log_name))
+    Popen('echo %s >> %s'%(fname,log_name),shell=True)
+    return '任务添加成功'
 if __name__ == '__main__':
-    app.run(debug=True)
-    #print(get_procNum('sqlmap'))
+    app.run(host='0.0.0.0',debug=True)
+#    print(get_procNum('sqlmap'))
