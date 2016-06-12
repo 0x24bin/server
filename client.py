@@ -48,7 +48,7 @@ def get_task():
     try:
         f = request.files['target']
         print(request.files,'==')
-        fname = '/tmp/t/%s'%secure_filename(f.filename)
+        fname = './log/%s'%secure_filename(f.filename)
         if path.exists(fname):
             return "任务已经存在于我的服务器之中"
         f.save(fname)
